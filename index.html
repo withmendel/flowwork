@@ -2459,144 +2459,83 @@ At Flowwork, we partner with visionary founders, businesses, and enterprises to 
     </div>
   </footer>
 
-  <!-- ================= CALENDLY BOOKING MODAL ================= -->
-  <div id="booking-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-300">
+ <!-- ================= CALENDLY BOOKING MODAL ================= -->
+<div id="booking-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-300">
+  
+  <!-- Modal Container -->
+  <div class="bg-white w-full max-w-5xl rounded-3xl shadow-2xl overflow-hidden border border-gray-100 relative max-h-[90vh] flex flex-col md:flex-row">
     
-    <!-- Modal Container -->
-    <div class="bg-white w-full max-w-4xl rounded-3xl shadow-2xl overflow-hidden border border-gray-100 relative max-h-[90vh] flex flex-col md:flex-row">
-      
-      <!-- Close Button -->
-      <button onclick="closeBookingModal()" class="absolute top-4 right-4 z-20 w-8 h-8 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-full flex items-center justify-center font-bold text-sm transition-colors">
-        ✕
-      </button>
+    <!-- Close Button -->
+    <button onclick="closeBookingModal()" class="absolute top-4 right-4 z-50 w-8 h-8 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-full flex items-center justify-center font-bold text-sm transition-colors">
+      ✕
+    </button>
 
-     
-
-      <!-- Modal Left Column: Host Details -->
-      <div class="w-full md:w-1/2 p-8 border-r border-gray-100 flex flex-col justify-between overflow-y-auto">
-        <div>
-                    <!-- Logo -->
-          <div class="flex items-center gap-2 mb-8">
-            <div class="text-emerald-700 text-2xl font-bold">✳&gt;</div>
-            <div class="flex flex-col">
-              <span class="font-bold text-slate-900 text-lg leading-none">Flowwork</span>
-              <span class="text-[10px] text-gray-500 font-serif italic">Automation</span>
-            </div>
-          </div>
-               <!-- Host Avatar & Info -->
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center text-sm shadow-sm">MS</div>
-            <div>
-              <div class="text-xs font-semibold text-blue-900">Mendel Sackey: CEO / AI Engineer/ Co-founder</div>
-              <h3 class="text-2xl font-serif font-bold text-slate-900">Flowwork Meeting</h3>
-            </div>
-          </div>
-
-          <!-- Duration & Location -->
-          <div class="space-y-2 mb-6 text-xs text-gray-600">
-            <div class="flex items-center gap-2">
-              <span>🕒</span>
-              <span class="font-medium">30 min</span>
-            </div>
-            <div class="flex items-start gap-2">
-              <span>📹</span>
-              <span>Web conferencing details provided upon confirmation.</span>
-            </div>
-          </div>
-
-          <!-- Call Description -->
-          <p class="text-xs text-gray-700 font-medium mb-4">
-            Book a consultation with Flowwork to explore how AI can create value for your company.
-          </p>
-
-          <div class="text-xs text-gray-600 space-y-2">
-            <div class="font-semibold text-slate-900">On the call:</div>
-            <ul class="list-disc pl-4 space-y-1">
-              <li>Discuss your AI goals</li>
-              <li>Identify high-value opportunities across your business</li>
-            </ul>
+    <!-- Modal Left Column: Host Details -->
+    <div class="w-full md:w-1/2 p-8 md:p-10 border-r border-gray-100 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <!-- Logo -->
+        <div class="flex items-center gap-2 mb-10">
+          <div class="text-emerald-700 text-2xl font-bold">✳&gt;</div>
+          <div class="flex flex-col">
+            <span class="font-bold text-slate-900 text-lg leading-none">Flowwork</span>
+            <span class="text-[10px] text-gray-500 font-serif italic">Automation</span>
           </div>
         </div>
 
-        <!-- Footer Links -->
-        <div class="flex items-center gap-4 text-[11px] text-blue-600 pt-6 mt-6 border-t border-gray-100">
-          <a href="#" class="hover:underline">Cookie settings</a>
-          <a href="#" class="hover:underline">Privacy Policy</a>
+        <!-- Host Avatar & Info -->
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center text-sm shadow-sm">MS</div>
+          <div>
+            <div class="text-xs font-bold text-slate-500 tracking-wide uppercase mb-1">Mendel Sackey: CEO / Co-founder</div>
+            <h3 class="text-2xl font-serif font-bold text-slate-900">Flowwork Meeting</h3>
+          </div>
+        </div>
+
+        <!-- Duration & Location -->
+        <div class="space-y-3 mb-8 text-sm text-gray-600 font-medium">
+          <div class="flex items-center gap-3">
+            <span class="text-lg">🕒</span>
+            <span>30 min</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-lg">📹</span>
+            <span>Web conferencing details provided upon confirmation.</span>
+          </div>
+        </div>
+
+        <!-- Call Description -->
+        <p class="text-sm text-gray-700 leading-relaxed mb-6">
+          Book a consultation with Flowwork to explore how AI can create value for your company.
+        </p>
+
+        <div class="text-sm text-gray-600 space-y-3">
+          <div class="font-bold text-slate-900">On the call:</div>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>Discuss your AI goals</li>
+            <li>Identify high-value opportunities across your business</li>
+          </ul>
         </div>
       </div>
 
-     <!-- Modal Right Column: Real Calendly Embed -->
-<div class="w-full md:w-1/2 bg-white flex flex-col justify-between overflow-hidden">
-  <!-- Calendly inline widget begin -->
-  <div class="calendly-inline-widget" 
-       data-url="https://calendly.com/king-mendy01/30min?hide_gdpr_banner=1" 
-       style="min-width:320px;height:700px;">
-  </div>
-  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  <!-- Calendly inline widget end -->
-</div>
-          <!-- Calendar Grid Days -->
-          <div class="grid grid-cols-7 gap-1 text-center text-[11px] font-semibold text-gray-500 mb-2">
-            <div>Mon</div>
-            <div>Tue</div>
-            <div>Wed</div>
-            <div>Thu</div>
-            <div>Fri</div>
-            <div>Sat</div>
-            <div>Sun</div>
-          </div>
-
-          <!-- Dates -->
-          <div class="grid grid-cols-7 gap-1 text-center text-xs">
-            <!-- Empty days offset -->
-            <div></div><div></div><div></div>
-            <div class="p-2 text-gray-400">1</div>
-            <div class="p-2 text-gray-400">2</div>
-            <div class="p-2 text-gray-400">3</div>
-            <div class="p-2 text-gray-400">4</div>
-
-            <div class="p-2 text-gray-400">5</div>
-            <div class="p-2 text-gray-400">6</div>
-            <div class="p-2 text-gray-400">7</div>
-            <div class="p-2 text-gray-400">8</div>
-            <div class="p-2 text-gray-400">9</div>
-            <div class="p-2 text-gray-400">10</div>
-            <div class="p-2 text-gray-400">11</div>
-
-            <div class="p-2 text-gray-400">12</div>
-            <div class="p-2 text-gray-400">13</div>
-            <div class="p-2 text-gray-400">14</div>
-            <div class="p-2 text-gray-400">15</div>
-            <div class="p-2 text-gray-400">16</div>
-            <div class="p-2 text-gray-400">17</div>
-            <div class="p-2 text-gray-400">18</div>
-
-            <div class="p-2 text-gray-400">19</div>
-            <div class="p-2 text-gray-400">20</div>
-            <div class="p-2 text-gray-400">21</div>
-            <div class="p-2 text-gray-400">22</div>
-            <div class="p-2 text-gray-400">23</div>
-            <div class="p-2 text-gray-400">24</div>
-            <div class="p-2 text-gray-400">25</div>
-
-            <div class="p-2 text-gray-400">26</div>
-            <div class="p-2 text-gray-400">27</div>
-            <div class="p-2 font-bold text-blue-600 relative">28<span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-blue-600"></span></div>
-            <div class="p-2 text-gray-400">29</div>
-            <div class="p-2 text-gray-400">30</div>
-            <div class="p-2 text-gray-400">31</div>
-          </div>
-
-
-        <!-- Timezone Selector -->
-        <div class="pt-6 border-t border-gray-100 text-xs text-gray-500 flex items-center gap-1">
-          <span>🌐 UTC Time (20:22)</span>
-          <span class="text-[10px]">▼</span>
-        </div>
+      <!-- Footer Links -->
+      <div class="flex items-center gap-6 text-xs text-blue-600 pt-6 mt-8 border-t border-gray-100">
+        <a href="#" class="hover:underline">Cookie settings</a>
+        <a href="#" class="hover:underline">Privacy Policy</a>
       </div>
-
     </div>
+
+    <!-- Modal Right Column: Real Calendly Embed -->
+    <div class="w-full md:w-1/2 bg-white flex flex-col relative h-[600px] md:h-auto">
+      <!-- Calendly inline widget -->
+      <div class="calendly-inline-widget w-full h-full" 
+           data-url="https://calendly.com/king-mendy01/30min?hide_gdpr_banner=1" 
+           style="min-width:320px;height:100%;">
+      </div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+
   </div>
+</div>
 
 </body>
 </html>
