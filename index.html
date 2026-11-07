@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="hu">
+<html lang="de">
+<html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flowwork.com - AI for Modern Companies</title>
+  <title>Flowwork Automation</title>
   
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Google Fonts: Inter & Playfair Display -->
+  <!-- Google Fonts: Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Montserrat', 'sans-serif'],
           },
           colors: {
             brand: {
-              orange: '#FF5A26',
-              'orange-hover': '#e04918',
-              blue: '#0052FF',
-              'blue-dark': '#0038A8',
-              'navy-dark': '#0A1833',
+              orange: '#FF5A36', // Exact Rosental Orange
+              dark: '#2C2C2C',   // Exact footer dark brown
+              light: '#F9F9F9',  // Off-white background
             }
           }
         }
       }
     }
   </script>
+
+  <style>
+    /* Removing rounded corners globally to match the clinical look */
+    * { border-radius: 0 !important; }
+    
+    /* Allow specific buttons to have pill shapes if needed */
+    .btn-pill { border-radius: 9999px !important; }
+
+    .top-bar { background-color: #2C2C2C; color: white; font-size: 12px; }
+    
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] summary .chevron { transform: rotate(180deg); }
+  </style>
+</head>
 
   <style>
     /* Custom subtle glassmorphism effects */
@@ -124,6 +140,14 @@
 <body class="font-sans antialiased text-gray-900 bg-[#FBFBFD] selection:bg-brand-orange selection:text-white">
 
   <!-- ================= HEADER / NAVIGATION ================= -->
+<header class="w-full bg-white border-b border-gray-200">
+    <!-- Top Dark Bar -->
+    <div class="top-bar py-2 px-6 flex justify-end items-center gap-6">
+      <span class="flex items-center gap-1">📍 1221 Budapest, Bencés utca 32.</span>
+      <span class="flex items-center gap-1">📞 +36704350201</span>
+      <span class="flex items-center gap-1">✉️ info@flowwork.com</span>
+    </div>
+  
   <header class="fixed top-4 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <nav class="glass-nav rounded-full px-5 py-3 flex items-center justify-between shadow-sm transition-all duration-300">
       
@@ -2116,6 +2140,126 @@ At Flowwork, we partner with visionary founders, businesses, and enterprises to 
 
     </div>
 
+        <!-- ================= VIEW: HOME / PRICES ================= -->
+    <div id="home-view" class="view-section bg-white pt-16">
+      
+      <!-- Page Title -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl sm:text-5xl font-light text-slate-900 mb-4">Prices of dental treatments</h1>
+        <p class="text-gray-500 text-sm">We believe in comprehensibility and transparency.</p>
+      </div>
+
+      <!-- Pricing Layout -->
+      <section class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
+        
+        <!-- Left Text Column -->
+        <div class="md:col-span-1">
+          <p class="text-sm text-slate-900 leading-relaxed mb-8">
+            <strong class="font-semibold">Our prices are indicative.</strong> The exact price is determined by the personalized treatment plan of our dentist. For this, the consultation is free of charge. It is important to us that you understand your treatment plan, so if you have any question about the offer or need further information, please contact us!
+          </p>
+          <div class="flex flex-col gap-3 items-start">
+            <button onclick="openBookingModal()" class="btn-pill bg-brand-orange text-white px-8 py-3 text-xs font-bold uppercase tracking-wider hover:bg-orange-600 transition">
+              Request Information
+            </button>
+            <button class="btn-pill border border-gray-300 text-slate-800 px-8 py-3 text-xs font-bold uppercase tracking-wider hover:border-slate-800 transition">
+              Price Examples
+            </button>
+            <button class="btn-pill border border-gray-300 text-slate-800 px-8 py-3 text-xs font-bold uppercase tracking-wider hover:border-slate-800 transition">
+              Dental Packages
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Pricing Table -->
+        <div class="md:col-span-2">
+          <div class="border-t-2 border-slate-900 pt-4 mb-4 flex justify-between text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+            <div class="w-1/2">Service</div>
+            <div class="w-1/6 text-center">Our Prices</div>
+            <div class="w-1/6 text-center">Western Europe Prices</div>
+            <div class="w-1/6 text-right text-brand-orange">Savings</div>
+          </div>
+
+          <!-- Table Rows -->
+          <div class="space-y-4 text-sm">
+            <div class="flex justify-between border-b border-gray-100 pb-4">
+              <div class="w-1/2 text-slate-700">X-Ray</div>
+              <div class="w-1/6 text-center text-slate-900 font-medium">60 €</div>
+              <div class="w-1/6 text-center text-gray-400">85 €</div>
+              <div class="w-1/6 text-right text-brand-orange">30%</div>
+            </div>
+            <div class="flex justify-between border-b border-gray-100 pb-4">
+              <div class="w-1/2 text-slate-700">CT Scan</div>
+              <div class="w-1/6 text-center text-slate-900 font-medium">100 €</div>
+              <div class="w-1/6 text-center text-gray-400">170 €</div>
+              <div class="w-1/6 text-right text-brand-orange">41%</div>
+            </div>
+            <div class="flex justify-between border-b border-gray-100 pb-4">
+              <div class="w-1/2 text-slate-700">Professional Dental Hygiene</div>
+              <div class="w-1/6 text-center text-slate-900 font-medium">100 €</div>
+              <div class="w-1/6 text-center text-gray-400">156 €</div>
+              <div class="w-1/6 text-right text-brand-orange">49%</div>
+            </div>
+            <div class="flex justify-between border-b border-gray-100 pb-4">
+              <div class="w-1/2 text-slate-700">Metal-Free Crown</div>
+              <div class="w-1/6 text-center text-slate-900 font-medium">450 €</div>
+              <div class="w-1/6 text-center text-gray-400">1,200 €</div>
+              <div class="w-1/6 text-right text-brand-orange">67%</div>
+            </div>
+            <div class="flex justify-between border-b border-gray-100 pb-4">
+              <div class="w-1/2 text-slate-700">Implant (Alpha Bio)</div>
+              <div class="w-1/6 text-center text-slate-900 font-medium">500 €</div>
+              <div class="w-1/6 text-center text-gray-400">2,230 €</div>
+              <div class="w-1/6 text-right text-brand-orange">80%</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="bg-[#F9F9F9] py-20">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div class="md:col-span-1">
+            <p class="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-4">FAQ</p>
+            <h2 class="text-4xl font-light text-slate-900 leading-tight">Do you have a<br>question? Find it here<br>or contact us!</h2>
+          </div>
+
+          <div class="md:col-span-2 space-y-0">
+            <!-- FAQ Item 1 -->
+            <details class="border-t border-gray-300 py-4 group">
+              <summary class="flex justify-between items-center font-medium text-sm text-slate-800">
+                Are you open at weekends as well?
+                <span class="chevron transition-transform text-gray-400">˅</span>
+              </summary>
+              <p class="text-xs text-gray-500 mt-3">No, we are only open on weekdays.</p>
+            </details>
+            <!-- FAQ Item 2 -->
+            <details class="border-t border-gray-300 py-4 group">
+              <summary class="flex justify-between items-center font-medium text-sm text-slate-800">
+                Where can I park?
+                <span class="chevron transition-transform text-gray-400">˅</span>
+              </summary>
+              <p class="text-xs text-gray-500 mt-3">Free parking is available in front of the clinic.</p>
+            </details>
+            <!-- FAQ Item 3 -->
+            <details class="border-t border-gray-300 py-4 group">
+              <summary class="flex justify-between items-center font-medium text-sm text-slate-800">
+                How can I pay for my treatment?
+                <span class="chevron transition-transform text-gray-400">˅</span>
+              </summary>
+              <p class="text-xs text-gray-500 mt-3">We accept cash, debit, and all major credit cards.</p>
+            </details>
+            <details class="border-t border-b border-gray-300 py-4 group">
+              <summary class="flex justify-between items-center font-medium text-sm text-slate-800">
+                How will the consultation happen?
+                <span class="chevron transition-transform text-gray-400">˅</span>
+              </summary>
+              <p class="text-xs text-gray-500 mt-3">You will meet our specialist for a 30-minute assessment.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </div>
+
 <!-- ================= VIEW: AI AUTOMATION PAGE ================= -->
     <div id="ai-automation-view" class="view-section hidden pt-24 pb-20">
       
@@ -2377,25 +2521,7 @@ At Flowwork, we partner with visionary founders, businesses, and enterprises to 
             © 2026 Flowwork Automation. All rights reserved.
           </p>
         </div>
-
-          
-  <footer class="bg-[#0b0f19] text-gray-400 py-16 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-6">
       
-      <!-- Main Footer Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-        
-        <!-- Column 1: Brand / Agency -->
-        <div class="space-y-4">
-          <div class="flex items-center gap-2 mb-6">
-            <span class="text-emerald-400 font-bold text-xl">✳&gt;</span>
-            <span class="font-serif font-bold text-white text-lg tracking-tight">Flowwork</span>
-          </div>
-          <p class="text-sm leading-relaxed text-gray-400">
-            AI Automation Agency for modern businesses. We build custom workflows and intelligent systems that eliminate busy work.
-          </p>
-        </div>
-
         <!-- Column 2: Contact -->
         <div>
           <h4 class="text-white text-[11px] font-bold uppercase tracking-widest mb-6">Contact</h4>
